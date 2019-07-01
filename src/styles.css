@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+body{background-color: #f4f4f4}
+.btn-primary{
+    background-color:#3c40c6
+}
+tr td a {font-size: 15px}
+tr td a{
+    color: #3c40c6;
+}
+th{font-size: 20px}
+.card-header{
+    font-size: 20px
+}
+.details{
+    background: url('src/assets/note3.jpg')no-repeat center ;
+    height: 400px;
+    background-size: cover;
+    padding-top:50px;
+}
+
+.navbar-nav a{
+    color:#eee;
+    float: right;
+    
+}
+.navbar{
+
+   background-color:  #3c40c6
+}
+.navbar li{
+    margin-left:15px
+}
+
+.navbar-nav a.active {
+   background-color:#eee;
+   color: #3c40c6;margin: 0px;
+   border-radius: 5%;
+  
+}
+
+.contact img{width: 100px;height: 100px}
+
+
+.title {font-size: 25px;color: #eee}
+.about p{font-size: 20px}

@@ -1,0 +1,11 @@
+.done-task
+{
+    text-decoration-line: line-through;color:#c0392b;
+}
+.pendingTasks{
+    background-color: #c0392b; padding: 1px 5px;border-radius: 50%; color:#fff;
+}
+.green{
+   background-color: #56a7fd;  padding: 1px 5px;border-radius: 50%; color:#fff;
+
+}

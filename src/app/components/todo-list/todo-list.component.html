@@ -1,0 +1,54 @@
+<div *ngIf="isPageLoaded==false"  class="spinner-border text-primary" role="status">
+  
+    <span class="sr-only">Loading...</span>
+  
+</div>
+
+<div *ngIf="isPageLoaded==true" class="card">
+  <div class="card-header"> {{name}}`s Tasks  <span *ngIf="getPendingTasks()>0" [class.green]="getPendingTasks()<=3" [class.pendingTasks]="getPendingTasks()>3"  >{{getPendingTasks()}}</span></div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-8"><input #title (keyup.enter)="addTask(title.value);title.value='';"
+         type="text" placeholder="new task" class="form-control"></div>
+      <div class="col-md-4">
+        <button  (click)="addTask(title.value);title.value=''" class="btn btn-primary">Add
+            <i class="fa fa-plus" aria-hidden="true"></i> 
+        </button>
+      </div>
+
+    </div>
+    
+    <div class="row"><br/></div>
+    <div class="row" *ngIf="tasksList.length==0">
+      <h1>No Tasks Found</h1>
+    </div>
+    <div class="row"  *ngIf="tasksList.length>0">
+      <table class="table table-bordered ">
+        <thead>
+          <tr>
+            <th></th>
+            <th> Task</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of tasksList;let i=index">
+            <td>{{i+1}}</td>
+            <td>
+              <!-- <input type="text" [(ngModel)]="task.title"> -->
+              <a [routerLink]="['/todo/details',task.ID]"><span [class.done-task]="task.Done">{{task.Title | uppercase}}</span></a>   </td>
+            <td><input type="checkbox" [(ngModel)]="task.Done" (ngModelChange)="changeStatus(task)" > </td>
+            <!-- <td><input type="checkbox" [checked]="task.Done" (change)="changeStatus(task)" > </td> -->
+
+            <td><button class="btn btn-primary" (click)="removeTask(i)">Delete
+
+                <i class="fa fa-trash" aria-hidden="true"></i>         </button></td>
+          </tr>
+         
+        </tbody>
+      </table>
+    </div>
+  </div> 
+ 
+</div>

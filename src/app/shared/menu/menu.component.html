@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg  " >
+  <div class="container">
+    <!-- <a class="navbar-brand" [routerLink]="['/home']"> -->
+    <img class="logo" src="assets/logo3.png" alt=""width='50px' height="50px"><span class='title'> TodoList</span>
+    <!-- </a> -->
+    <button class="navbar-toggler" type="button"
+     data-toggle="collapse" data-target="#navbarNav"
+     aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav"   >
+      <ul class="navbar-nav ml-auto"  style="display:flex ;"  >
+        <!-- <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
+        </li> -->
+        <li class="nav-item">
+            <a class="nav-link"  [routerLink]="['/todo']" routerLinkActive="active" >To Do List</a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link"  [routerLink]="['/create-task']" routerLinkActive="active" >Create Task</a>
+            </li>
+        <!-- <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['/about']" routerLinkActive="active"  >About us</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contact']">Contact Us</a>
+        </li> -->
+  
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+
